@@ -1,0 +1,28 @@
+<div id="main" fxLayout="column">
+  <h1 md-dialog-title fxLayoutAlign="center center">Edit this photo</h1>
+  <md-dialog-content fxLayout="column">
+    <md-input-container fxFlex>
+      <input fxFlex mdInput name="url" (keyup.enter)="save()" [(ngModel)]="url" required placeholder="Add an existing URL">
+    </md-input-container>
+
+    <div class="mid" fxLayout="row" fxLayoutalign="end center">
+      <md-spinner id="spinner" class="spin"></md-spinner>
+      <div id="upload">
+        or&nbsp;
+        <button type="button" (click)="featuredInput1.click()" color="accent" md-raised-button>
+        <span>Upload a new image</span>
+      </button>
+        <input #featuredInput1 style="display: none" type="file" (change)="photoSelectedForList($event)">
+      </div>
+    </div>
+
+    <md-input-container fxFlex>
+      <input mdInput name="caption" (keyup.enter)="save()" [(ngModel)]="caption" placeholder="Caption">
+    </md-input-container>
+  </md-dialog-content>
+
+  <md-dialog-actions fxLayoutAlign="end center">
+    <button md-button type="button" md-dialog-close>Cancel</button>
+    <button md-button type="submit" (click)="save()">Save</button>
+  </md-dialog-actions>
+</div>

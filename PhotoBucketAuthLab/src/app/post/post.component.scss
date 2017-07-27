@@ -1,0 +1,40 @@
+// $horz-padding: 20px;
+// md-card {
+// //   padding: 24px;
+//   md-card-title {
+//     text-align: center;
+//   }
+//   img[md-card-image] {
+//     display: block;
+//     margin: auto;
+//     width: auto;
+//     max-height: 200px;
+//     cursor: pointer;
+//   }
+// }
+img {
+    max-height: 200px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.mat-card-image:first-child {
+    margin-top: 0;
+}
+
+md-card {
+  margin: 10px 0;
+  height: 300px;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+md-card-header {
+    padding-top: 20px;
+}
+
+md-card-actions {
+    margin-bottom: 0;
+    padding-bottom: 10;
+}
+

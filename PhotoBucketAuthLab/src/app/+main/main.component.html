@@ -1,0 +1,10 @@
+<md-tab-group>
+  <md-tab label="All Photos">
+    <app-post-list></app-post-list>
+  </md-tab>
+
+  <md-tab label="My Photos">
+    <app-my-posts></app-my-posts>
+  </md-tab>
+</md-tab-group>
+<button (click)="showPhotoDialog()" md-fab><md-icon>add</md-icon></button>

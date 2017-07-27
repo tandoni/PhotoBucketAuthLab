@@ -1,0 +1,30 @@
+<div id="main" fxLayout="column">
+  <h1 md-dialog-title fxLayoutAlign="center center">Add a new photo</h1>
+  <form #photoForm="ngForm" (ngSubmit)="onSubmit()" fxLayout="column">
+    <md-dialog-content fxLayout="column">
+      <md-input-container fxFlex>
+        <input mdInput name="url" [(ngModel)]="url" required placeholder="Add an existing URL">
+      </md-input-container>
+
+      <div class="mid" fxLayout="row" fxLayoutalign="end center">
+      <md-spinner id="spinner" class="spin"></md-spinner>
+      <div id="upload">
+        or&nbsp;
+        <button type="button" (click)="featuredInput1.click()" color="accent" md-raised-button>
+        <span>Upload an image</span>
+      </button>
+        <input #featuredInput1 style="display: none" type="file" (change)="photoSelectedForList($event)">
+      </div>
+    </div>
+      
+      <md-input-container fxFlex>
+        <input mdInput name="caption" [(ngModel)]="caption" placeholder="Caption">
+      </md-input-container>
+    </md-dialog-content>
+
+    <md-dialog-actions fxLayoutAlign="end center">
+      <button md-button type="button" md-dialog-close>Cancel</button>
+      <button md-button [disabled]="!photoForm.form.valid" type="submit">Save</button>
+    </md-dialog-actions>
+  </form>
+</div>

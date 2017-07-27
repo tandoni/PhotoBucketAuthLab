@@ -1,0 +1,5 @@
+<md-grid-list [cols]="numColumns" gutterSize="15px" rowHeight="300px">
+  <md-grid-tile *ngFor="let p of myPhotosStream | async | reverse">
+    <app-post fxFlex [displayEditOptions]="true" [photoWithAuthor]="p"></app-post>
+  </md-grid-tile>
+</md-grid-list>
